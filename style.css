@@ -1,0 +1,697 @@
+:root {
+    --bg-gradient: linear-gradient(
+        to bottom, 
+        #ca0808 0%,
+        #750505 30%,
+        #270a0a 70%,
+        #120404 100%
+    );
+    --text-color: #ffffff;
+    --card-bg-color: #750505;
+    --section-bg-color: #750505;
+    --card-border-color: #ffffff;
+    --card-button-border-color: #750505;
+    --card-hover-bg-color: #750505;
+    --section-hover-bg-color: #000000;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body.light-theme {
+    --bg-gradient: linear-gradient(
+        to bottom, 
+        #caf0f8 0%,
+        #ade8f4 40%,
+        #90e0ef 80%,
+        #48cae4 100%
+    );
+    --text-color: #750505;
+    --card-bg-color: #ade8f4;
+    --section-bg-color: #ade8f4;
+    --card-border-color: #750505;
+    --card-button-border-color: #ade8f4;
+    --card-hover-bg-color: #ade8f4;
+    --section-hover-bg-color: #48cae4;
+}
+
+body {
+    background-image: var(--bg-gradient);
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text-color);
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+/* Home */
+
+main {
+    flex:1;
+}
+
+nav {
+    width: 100%;
+    padding: 1rem 5%;
+    backdrop-filter: blur(15px);
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--card-hover-bg-color);
+    text-shadow: 0 0 10px var(--card-hover-bg-color);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 0.5px;
+    gap: 40px;
+}
+
+#home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+#home-text h1 {
+    font-family: 'Poppins', extra-bold, sans-serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+#home-text p {
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+#btnprojects {
+    padding: 0.75rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--card-button-border-color);
+    border-color: var(--card-border-color);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#btnprojects:hover {
+    background-color: var(--card-hover-bg-color);
+    text-shadow: 0 0 10px var(--card-hover-bg-color);
+}
+
+.profile-image {
+  border-radius: 150px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Posisi elemen di tengah secara horizontal */
+    justify-content: center;
+    gap: 1rem;             /* Jarak antara ikon sosmed dan teks di bawahnya */
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 30px;
+}
+
+/* About */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5%;
+    margin-top: 10px;
+    gap: 40px;
+}
+
+#about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+#about-text h1 {
+    font-family: 'Poppins', extra-bold,sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#about-text p {
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+}
+
+.csharp-icon, .javascript-icon, .python-icon, .html-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.tech-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-tech {
+    background-color: var(--card-bg-color);
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: 1px solid var(--card-border-color);
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.section-tech:hover {
+    border-color: var(--section-hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--section-hover-bg-color);
+}
+
+.section-education {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 6px var(--section-hover-bg-color);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.section-education h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.edu-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.edu-card:hover {
+    border-color: var(--section-hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--section-hover-bg-color);
+}
+
+.edu-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.edu-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.edu-icon {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.projects {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 40px;
+}
+
+.projects-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.projects-text h1 {
+    font-family: 'Poppins', extra-bold, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.projects-text p {
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.section-projects {
+    background-color: none;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    padding: 40px 30px;
+    min-height: 180px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    border-color: var(--section-hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--section-hover-bg-color);
+}
+
+.project-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.project-card p {
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* Contact */
+
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 40px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.contact-text h1 {
+    font-family: 'Poppins', extra-bold, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contact-text p {
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.section-contact {
+    background-color: none;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    padding: 20px; /* Diubah agar tidak terlalu lebar ke samping */
+    min-height: 80px;
+    flex: 1;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+    border-color: var(--section-hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--section-hover-bg-color);
+}
+
+.contact-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.contact-card p {
+    display: flex;
+    font-family: 'Inter', regular, sans-serif;
+    font-size: 13px; /* Dikecilkan sedikit agar email panjang muat */
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 700;
+    text-align: center;
+    word-break: break-all; /* Mencegah teks email keluar kotak */
+    overflow-wrap: break-word;
+}
+
+.floating-theme-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--card-border-color);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px var(--section-hover-bg-color);
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@media only screen and (max-width: 600px) {
+    /* --- NAVBAR --- */
+    nav {
+        padding: 0.8rem 3% !important;
+        margin-bottom: 1rem !important;
+        flex-wrap: wrap;
+    }
+
+    .name {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-links {
+        gap: 0.6rem !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem !important;
+    }
+
+    /* --- HOME --- */
+    .home {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 5%;
+        gap: 20px;
+    }
+
+    #home-text h1 {
+        font-size: 2.8rem !important;
+        letter-spacing: 5px !important;
+    }
+
+    #home-text p {
+        font-size: 14px !important;
+        letter-spacing: 1px;
+        padding: 0 10px;
+    }
+
+    .profile-image {
+        width: 180px !important;
+        height: 180px !important;
+        margin-bottom: 10px;
+    }
+
+    /* --- ABOUT & EDUCATION --- */
+    .about {
+        padding: 1rem 3%;
+        gap: 20px;
+    }
+
+    .section-tech {
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 15px auto;
+    }
+
+    .section-education {
+        max-width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 15px auto;
+    }
+
+    .education-grid {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .edu-card {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* --- PROJECTS --- */
+    .projects {
+        flex-direction: column;
+        padding: 0.5rem 3%;
+        text-align: center;
+    }
+
+    .projects-text h1 {
+        font-size: 2.2rem !important;
+        letter-spacing: 2px;
+    }
+
+    .project-grid {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100% !important;
+        max-width: 320px !important;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+
+    /* --- CONTACT --- */
+    .contact {
+        flex-direction: column;
+        padding: 0.5rem 3%;
+        text-align: center;
+    }
+
+    .contact-text h1 {
+        font-size: 2.2rem !important;
+        letter-spacing: 2px;
+    }
+
+    .contact-grid {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .contact-card {
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 15px !important;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* Home */
+    #home-text h1 {
+        font-size: 3.5rem;
+        letter-spacing: 8px;
+    }
+
+    .profile-image {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* About, Education, Projects, & Contact Grids (Muat 2 Kolom) */
+    .education-grid, .project-grid, .contact-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .edu-card, .project-card, .contact-card {
+        width: 45%;
+    }
+
+    .section-education {
+        max-width: 90%;
+        padding: 25px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* Home */
+    #home-text h1 {
+        font-size: 5rem;
+        letter-spacing: 15px;
+    }
+
+    /* Atur grid agar berada di tengah dan dibatasi lebarnya */
+    .education-grid, .project-grid, .contact-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Posisi card di tengah */
+        align-items: stretch;
+        gap: 25px;
+        max-width: 1100px; /* Batas lebar keseluruhan grid */
+        margin: 0 auto;
+    }
+
+    .edu-card, .project-card, .contact-card {
+        width: 320px !important; /* Kunci ukuran lebar kartu agar ideal */
+        flex: unset !important;   
+    }
+}
