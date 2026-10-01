@@ -512,7 +512,6 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    /* --- NAVBAR --- */
     nav {
         padding: 0.8rem 3% !important;
         margin-bottom: 1rem !important;
@@ -532,7 +531,6 @@ footer {
         font-size: 0.8rem !important;
     }
 
-    /* --- HOME --- */
     .home {
         flex-direction: column-reverse;
         align-items: center;
@@ -558,7 +556,6 @@ footer {
         margin-bottom: 10px;
     }
 
-    /* --- ABOUT & EDUCATION --- */
     .about {
         padding: 1rem 3%;
         gap: 20px;
@@ -588,7 +585,6 @@ footer {
         box-sizing: border-box;
     }
 
-    /* --- PROJECTS --- */
     .projects {
         flex-direction: column;
         padding: 0.5rem 3%;
@@ -614,7 +610,6 @@ footer {
         box-sizing: border-box;
     }
 
-    /* --- CONTACT --- */
     .contact {
         flex-direction: column;
         padding: 0.5rem 3%;
@@ -643,7 +638,6 @@ footer {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-    /* Home */
     #home-text h1 {
         font-size: 3.5rem;
         letter-spacing: 8px;
@@ -654,7 +648,6 @@ footer {
         height: 240px;
     }
 
-    /* About, Education, Projects, & Contact Grids (Muat 2 Kolom) */
     .education-grid, .project-grid, .contact-grid {
         flex-direction: row;
         flex-wrap: wrap;
@@ -673,25 +666,23 @@ footer {
 }
 
 @media only screen and (min-width: 900px) {
-    /* Home */
     #home-text h1 {
         font-size: 5rem;
         letter-spacing: 15px;
     }
 
-    /* Atur grid agar berada di tengah dan dibatasi lebarnya */
     .education-grid, .project-grid, .contact-grid {
         display: flex;
         flex-direction: row;
-        justify-content: center; /* Posisi card di tengah */
+        justify-content: center;
         align-items: stretch;
         gap: 25px;
-        max-width: 1100px; /* Batas lebar keseluruhan grid */
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .edu-card, .project-card, .contact-card {
-        width: 320px !important; /* Kunci ukuran lebar kartu agar ideal */
+        width: 320px !important;
         flex: unset !important;   
     }
 }
